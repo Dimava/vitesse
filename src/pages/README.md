@@ -10,11 +10,13 @@ Check out [`vite-plugin-pages`](https://github.com/hannoeru/vite-plugin-pages) f
 For example, instead of having
 
 ```ts
+// eslint-disable-next-line no-unused-vars
 import { isDark } from '../../../../composables'
 ```
 
 now, you can use
 
 ```ts
+// eslint-disable-next-line no-unused-vars
 import { isDark } from '~/composables'
 ```

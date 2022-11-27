@@ -1,0 +1,25 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "main": "index.ts",
+  "scripts": {
+    "dev": "tsx watch --inspect ."
+  },
+  "dependencies": {
+    "@fastify/cors": "^8.2.0",
+    "@fastify/static": "^6.5.1",
+    "@trpc/server": "^10.3.0",
+    "fastify": "^4.10.2",
+    "fs-jetpack": "^5.1.0",
+    "tsx": "^3.12.1",
+    "typescript": "5.0.0-dev.20221127",
+    "zod": "^3.19.1"
+  },
+  "devDependencies": {
+    "xo": "^0.53.1"
+  }
+}

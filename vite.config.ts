@@ -1,4 +1,4 @@
-import path from 'path'
+import path from 'node:path'
 import { defineConfig } from 'vite'
 import Preview from 'vite-plugin-vue-component-preview'
 import Vue from '@vitejs/plugin-vue'
@@ -18,6 +18,7 @@ import Shiki from 'markdown-it-shiki'
 export default defineConfig({
   resolve: {
     alias: {
+
       '~/': `${path.resolve(__dirname, 'src')}/`,
     },
   },
@@ -58,9 +59,9 @@ export default defineConfig({
 
     // https://github.com/antfu/unplugin-vue-components
     Components({
-      // allow auto load markdown components under `./src/components/`
+      // Allow auto load markdown components under `./src/components/`
       extensions: ['vue', 'md'],
-      // allow auto import and register components used in markdown
+      // Allow auto import and register components used in markdown
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
       dts: 'src/components.d.ts',
     }),
@@ -98,7 +99,9 @@ export default defineConfig({
       includeAssets: ['favicon.svg', 'safari-pinned-tab.svg'],
       manifest: {
         name: 'Vitesse',
+        // eslint-disable-next-line camelcase
         short_name: 'Vitesse',
+        // eslint-disable-next-line camelcase
         theme_color: '#ffffff',
         icons: [
           {
@@ -125,6 +128,7 @@ export default defineConfig({
     VueI18n({
       runtimeOnly: true,
       compositionOnly: true,
+
       include: [path.resolve(__dirname, 'locales/**')],
     }),
 
@@ -146,7 +150,9 @@ export default defineConfig({
   ssgOptions: {
     script: 'async',
     formatting: 'minify',
-    onFinished() { generateSitemap() },
+    onFinished() {
+      generateSitemap()
+    },
   },
 
   ssr: {

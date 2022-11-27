@@ -4,12 +4,10 @@
     "module": "ESNext",
     "target": "ESNext",
     "lib": [
-      "DOM",
       "ESNext"
     ],
     "strict": true,
     "esModuleInterop": true,
-    "jsx": "preserve",
     "skipLibCheck": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
@@ -18,29 +16,17 @@
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
     "types": [
-      "vitest",
-      "vite/client",
-      "vue/ref-macros",
-      "vite-plugin-pages/client",
-      "vite-plugin-vue-component-preview/client",
-      "vite-plugin-vue-layouts/client",
-      "vite-plugin-pwa/client"
+      "vitest"
     ],
-    "paths": {
-      "~/*": [
-        "src/*"
-      ]
-    }
+    "composite": true
+    // "exactOptionalPropertyTypes": true,
+  },
+  "paths": {
+    "~/*": [
+      "src/*"
+    ]
   },
   "exclude": [
-    "dist",
-    "node_modules",
-    "cypress",
-    "server"
-  ],
-  "references": [
-    {
-      "path": "server"
-    }
+    "node_modules"
   ]
 }

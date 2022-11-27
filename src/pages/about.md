@@ -12,9 +12,9 @@ title: About
 
 ```js
 // syntax highlighting example
-function vitesse() {
+export function vitesse() {
   const foo = 'bar'
-  console.log(foo)
+  window.console.log(foo)
 }
 ```
 
